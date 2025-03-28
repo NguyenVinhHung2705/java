@@ -8,18 +8,20 @@ public class bai5 {
 		Scanner s = new Scanner(System.in);
 		int x;
 		boolean isPrime;
+		int i;
 		do {
 			System.out.println("Nhập vào một số: ");
 			x = s.nextInt();
 			isPrime = true;
-			for(int i = 2;i*i<=x;i++) {
+			
+			for(i = 2;i*i<=x;i++) {
 				if(x % i == 0) {
 					isPrime = false;
 					break;
 				}
 			}
 			
-		}while(x < 2 || !isPrime);
+		}while(x < 2 || i * i <= x);
 		System.out.println(x + " là một số nguyên tố");
 		s.close();
 	}
